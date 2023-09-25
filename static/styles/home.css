@@ -3,8 +3,11 @@
 /* Example CSS rules */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f2f2f2;
     color: #333;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -17,3 +20,332 @@ p {
     font-size: 50px;
 }
 
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.start-button,
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #ff0066;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover,
+.nav-button:hover {
+    background-color: #ff3399;
+}
+
+/* Additional styling for Start Here button */
+.start-button {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Additional styling for Next button */
+#next-button {
+    background-color: #333;
+}
+
+#next-button:hover {
+    background-color: #444;
+}
+
+/* Additional styling for Previous button */
+#prev-button {
+    background-color: #333;
+}
+
+#prev-button:hover {
+    background-color: #444;
+}
+/* Layer 3: Memorable Photos */
+.memorable-photos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.memorable-photos h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.photo-slider {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+}
+
+.photo {
+    width: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+#prevButton,
+#nextButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#prevButton:hover,
+#nextButton:hover {
+    background-color: #f6d743;
+}
+
+
+/* Layer 4: Timeline */
+.timeline {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.timeline h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.milestones {
+    list-style: none;
+    padding: 0;
+}
+
+.milestones li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.milestones li:last-child {
+    border-bottom: none;
+}
+
+.date {
+    color: #333;
+    font-weight: bold;
+}
+
+.event {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Add hover effect for each milestone entry */
+.milestones li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Layer 5: Special Messages */
+.special-messages {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.special-messages h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.message-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: left;
+}
+
+.message {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.message-author {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Layer 6: Music and Countdown Timer */
+.music-timer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.music-timer h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.music-player {
+    margin: 20px auto;
+}
+
+.countdown {
+    margin-top: 20px;
+}
+
+.countdown h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+#countdown-timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0066;
+}
+
+/* Layer 7: Proposal Message */
+.proposal {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.proposal h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.proposal-message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.proposal-message p:last-child {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Layer 8: Interactive Games or Surprises */
+.interactive-games {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.interactive-games h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.interactive-games p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Layer 10: Acknowledgment and Closing */
+.acknowledgment {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.acknowledgment h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.acknowledgment p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.proposal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 18px;
+    background-color: #ff0066;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.proposal-button:hover {
+    background-color: #ff3399;
+}
+
+/* Layer 11: Conclusion and Call to Action */
+.conclusion {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.conclusion h2 {
+    color: #ff0066;
+    font-size: 24px;
+}
+
+.conclusion p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.continue-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 18px;
+    background-color: #ff0066;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+    background-color: #ff3399;
+}
