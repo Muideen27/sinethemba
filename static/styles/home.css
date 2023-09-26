@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    color: #ff0066;
+    color: #f6d743;
     font-size: 36px;
 }
 
@@ -50,24 +50,55 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
-
-/* Additional styling for Next button */
-#next-button {
-    background-color: #333;
+/* Layer 2: Message Board */
+.message-board {
+    text-align: center;
+    margin-top: 40px;
 }
 
-#next-button:hover {
-    background-color: #444;
+.message-board h2 {
+    color: #ff0066;
+    font-size: 24px;
 }
 
-/* Additional styling for Previous button */
-#prev-button {
-    background-color: #333;
+textarea#message-input {
+    width: 50%;
+    height: 20px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-#prev-button:hover {
-    background-color: #444;
+/* Style the message input placeholder text */
+textarea#message-input::placeholder {
+    color: #999;
+    font-style: italic;
 }
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color:  #0077b6;
+    color: #fff;
+    text-decoration: none;
+     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #f6d743;
+}
+
 /* Layer 3: Memorable Photos */
 .memorable-photos {
     text-align: center;
@@ -116,6 +147,7 @@ p {
     font-size: 16px;
     padding: 10px 20px;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 #prevButton:hover,
@@ -257,29 +289,15 @@ p {
 .proposal-message p:last-child {
     margin-top: 20px;
     font-weight: bold;
+    font-size: small;
+}
+
+.proposal-message p {
+    font-size: 24px;
+    font-style: italic;
 }
 
 /* Layer 8: Interactive Games or Surprises */
-.interactive-games {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.interactive-games h2 {
-    color: #ff0066;
-    font-size: 24px;
-}
-
-.interactive-games p {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    text-align: left;
-    line-height: 1.6;
-}
 
 /* Layer 10: Acknowledgment and Closing */
 .acknowledgment {
@@ -301,6 +319,8 @@ p {
     background-color: #fff;
     text-align: left;
     line-height: 1.6;
+    font-size: 24px;
+    font-style: italic;
 }
 
 .proposal-button {
@@ -316,43 +336,5 @@ p {
 }
 
 .proposal-button:hover {
-    background-color: #ff3399;
-}
-
-/* Layer 11: Conclusion and Call to Action */
-.conclusion {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.conclusion h2 {
-    color: #ff0066;
-    font-size: 24px;
-}
-
-.conclusion p {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    text-align: left;
-    line-height: 1.6;
-}
-
-.continue-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px;
-    font-size: 18px;
-    background-color: #ff0066;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.continue-button:hover {
     background-color: #ff3399;
 }
