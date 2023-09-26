@@ -1,8 +1,22 @@
 from flask import Flask
-from views import views
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
-app = Flask(__name__)
-app.register_blueprint(views, url_prefix="/")
+db = SQLAlchemy()
+migrate = Migrate()
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+def create_app():
+    app = Flask(__name__)
+
+    # Configure the app here
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Leye:leye@localhost/my_love'
+
+    # Initialize extensions
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    # Import and register blueprints
+    from views import views
+    app.register_blueprint(views, url_prefix='/')
+
+    return app

@@ -16,13 +16,11 @@
 <!-- Layer 2: Message Board -->
 <div class="message-board">
     <h2>Your Thoughts Milady</h2>
-    <form id="message-form">
-        <textarea id="message-input" rows="5" placeholder="What's on your mind..."></textarea>
-        <button id="submit-button" class="submit-button">Submit</button>
+    <form id="message-form" action="#" method="POST">
+        <textarea id="message-input" name="user_message" rows="5" placeholder="Whats on your mind..."></textarea>
+        <button type="submit" class="submit-button">Submit</button>
     </form>
 </div>
-
-
 
     <!-- Layer 3: Memorable Photos -->
 <div class="memorable-photos">
@@ -80,7 +78,7 @@
     <!-- Music Player -->
     <div class="music-player">
         <audio controls autoplay loop>
-            <source src="{{ url_for('static', filename='audio/background-music.mp3') }}" type="audio/mpeg">
+            <source src="{{ url_for('static', filename='audio/background-music_01.mp3') }}" type="audio/mpeg">
         </audio>
     </div>
     
