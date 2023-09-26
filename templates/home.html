@@ -3,12 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+
     <title>Home</title>
 </head>
 <body>
     <div>
         <p>Hello, {{ name }}</p>
-        <h1>Will you be my girlfriend??</h1>
+        <h1>Welcome to Our Special Journey</h1>
     </div>
+    
+    <!-- Layer 2: Navigation and Interactive Elements -->
+    <div class="navigation">
+        <a href="#" class="start-button">Start Here</a>
+        <button id="prev-button" class="nav-button">Previous</button>
+        <button id="next-button" class="nav-button">Next</button>
+    </div>
+
+<!-- Layer 3: Memorable Photos -->
+<div class="memorable-photos">
+    <h2>Memorable Moments</h2>
+    <div class="photo-container">
+        <img src="{{ url_for('static', filename='images/first-chat.jpg') }}" alt="First-chat">
+        <img src="{{ url_for('static', filename='images/happy-moment.jpg') }}" alt="Happy-moment">
+        <img src="{{ url_for('static', filename='images/blushing-time.jpg') }}" alt="Blushing-time">
+        <img src="{{ url_for('static', filename='images/hard-times.jpg') }}" alt="Hard-times">
+    </div>
+    <button id="prevButton">Previous</button>
+    <button id="nextButton">Next</button>
+</div>
+
+
+
+
+<!-- Layer 4: Timeline -->
+<div class="timeline">
+    <h2>Our Journey Together</h2>
+    <ul class="milestones">
+        <li>
+            <div class="date">June 1, 2022</div>
+            <div class="event">Our First Meeting</div>
+        </li>
+        <li>
+            <div class="date">September 15, 2022</div>
+            <div class="event">First Date Night</div>
+        </li>
+        <!-- Add more milestone entries here -->
+    </ul>
+</div>
+
+<!-- Layer 5: Special Messages -->
+<div class="special-messages">
+    <h2>Our Special Messages</h2>
+    <div class="message-card">
+        <p class="message">
+            "In your smile, I find my happiness. In your eyes, I see my future."
+        </p>
+        <p class="message-author">- [Your Name]</p>
+    </div>
+    <div class="message-card">
+        <p class="message">
+            "Every moment with you is a treasure, and I cherish them all."
+        </p>
+        <p class="message-author">- [Your Name]</p>
+    </div>
+    <!-- Add more message cards here -->
+</div>
+<!-- Layer 6: Music and Countdown Timer -->
+<div class="music-timer">
+    <h2>Our Melody and Countdown</h2>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio controls autoplay loop>
+            <source src="{{ url_for('static', filename='audio/background-music.mp3') }}" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        <h3>Countdown to Our Next Adventure</h3>
+        <div id="countdown-timer">
+            <p id="timer"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Layer 7: Proposal Message -->
+<div class="proposal">
+    <h2>My Heart's Desire</h2>
+    <div class="proposal-message">
+        <p>
+            My Dearest [Her Name],
+        </p>
+        <p>
+            From the moment we met, my life has been filled with joy and love like never before. Every day spent talking to you, sharing our dreams, and creating beautiful memories has only strengthened my feelings for you.
+        </p>
+        <p>
+            Today, I want to ask you the most important question of my life. I want to be with you, not just as a friend, but as someone who holds your hand through every joy and challenge life throws our way. I want to be your partner, your confidant, and your greatest source of love and support.
+        </p>
+        <p>
+            Will you be my girlfriend and embark on this incredible journey of love and companionship with me? I promise to cherish every moment, make you smile every day, and be there for you always.
+        </p>
+        <p>
+            With all my love,
+            <br>
+            [Your Name]
+        </p>
+    </div>
+</div>
+
+<!-- Layer 8: Interactive Games or Surprises -->
+<div class="interactive-games">
+    <h2>Discover Fun Surprises</h2>
+    <p>As you explore our journey, you might come across some interactive surprises. Keep an eye out for visual cues like hearts ♥️, stars 🌟, and gifts 🎁 that will guide you to these special moments.</p>
+</div>
+
+<!-- Layer 10: Acknowledgment and Closing -->
+<div class="acknowledgment">
+    <h2>Gratitude and Next Steps</h2>
+    <p>Thank you for taking this journey with me, [Her Name]. Our time together has been filled with happiness, laughter, and love, and I cherish every moment we've shared.</p>
+    <p>As we come to the end of this presentation, I want you to know that this is just the beginning of our beautiful story. There's one more thing I'd like you to explore, a surprise that awaits you.</p>
+    <p>Click the button below to unveil the final part of my proposal, and let's take the next step in our journey together.</p>
+    <a href="/proposal" class="proposal-button">Continue to Proposal</a>
+</div>
+
+<!-- Layer 11: Conclusion and Call to Action -->
+<div class="conclusion">
+    <h2>Our Journey Awaits</h2>
+    <p>[Her Name], as we come to the end of this presentation, I want you to know that our journey together is just beginning. The path ahead is filled with love, adventure, and countless beautiful moments waiting to be shared.</p>
+    <p>I invite you to take the next step with me, not just in this presentation, but in our lives. Click the button below when you're ready to continue our journey together.</p>
+    <a href="/proposal" class="continue-button">Continue</a>
+</div>
+
+<script>
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    const photos = document.querySelectorAll(".photo-container img");
+    let currentIndex = 0;
+    
+    // Show the first photo by default
+    photos[currentIndex].classList.add("active");
+    
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            photos[currentIndex].classList.remove("active");
+            currentIndex--;
+            photos[currentIndex].classList.add("active");
+        }
+    });
+    
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < photos.length - 1) {
+            photos[currentIndex].classList.remove("active");
+            currentIndex++;
+            photos[currentIndex].classList.add("active");
+        }
+    });    
+</script>
 </body>
 </html>
