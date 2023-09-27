@@ -20,37 +20,7 @@ p {
     font-size: 50px;
 }
 
-.navigation {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.start-button,
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    background-color: #ff0066;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.start-button:hover,
-.nav-button:hover {
-    background-color: #ff3399;
-}
-
-/* Additional styling for Start Here button */
-.start-button {
-    font-weight: bold;
-    font-size: 20px;
-}
-/* Layer 2: Message Board */
+/* Layer 2: Your Thoughts Milady */
 .message-board {
     text-align: center;
     margin-top: 40px;
@@ -62,8 +32,8 @@ p {
 }
 
 textarea#message-input {
-    width: 50%;
-    height: 20px;
+    width: 70%;
+    height: 30px;
     margin: 0 auto;
     display: block;
     padding: 10px;
@@ -79,24 +49,6 @@ textarea#message-input {
 textarea#message-input::placeholder {
     color: #999;
     font-style: italic;
-}
-
-.submit-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 18px;
-    background-color:  #0077b6;
-    color: #fff;
-    text-decoration: none;
-     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #f6d743;
 }
 
 /* Layer 3: Memorable Photos */
@@ -139,7 +91,7 @@ textarea#message-input::placeholder {
 /* Styling for Previous and Next buttons */
 #prevButton,
 #nextButton {
-    background-color: #0077b6;
+    background-color: #ff4f4f;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -152,7 +104,7 @@ textarea#message-input::placeholder {
 
 #prevButton:hover,
 #nextButton:hover {
-    background-color: #f6d743;
+    background-color: #ff6b6b;
 }
 
 
@@ -337,4 +289,57 @@ textarea#message-input::placeholder {
 
 .proposal-button:hover {
     background-color: #ff3399;
+}
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1; /* Ensure it's on top of other content */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 10% auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #ff6b6b; /* Sweet pink color */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4f4f; /* Slightly darker pink on hover */
 }

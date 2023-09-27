@@ -8,7 +8,7 @@
     <title>Home</title>
 </head>
 <body>
-    <div>
+    <div class="her">
         <p>Hello, {{ name }}</p>
         <h1>Welcome to Our Special Journey</h1>
     </div>
@@ -34,9 +34,6 @@
     <button id="nextButton">Next</button>
     <button id="prevButton">Previous</button>
 </div>
-
-
-
 
 <!-- Layer 4: Timeline -->
 <div class="timeline">
@@ -127,6 +124,22 @@
     <a href="/proposal" class="proposal-button">Continue to Proposal</a>
 </div>
 
+<!-- Modal -->
+<div id="proposalModal" class="modal">
+    <div class="modal-content">
+        <h2>Proposal Question</h2>
+        <p>Will you be my girlfriend?</p>
+        <form id="proposalForm">
+            <label for="answer">Answer:</label>
+            <select id="answer" name="answer">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 <script>
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
@@ -150,7 +163,36 @@
             currentIndex++;
             photos[currentIndex].classList.add("active");
         }
-    });    
+    });
+    
+    // Get the modal and the link
+var modal = document.getElementById("proposalModal");
+var proposalLink = document.querySelector(".proposal-button");
+
+// When the user clicks the link, show the modal
+proposalLink.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default link behavior
+    modal.style.display = "block";
+});
+
+// Handle the form submission
+var proposalForm = document.getElementById("proposalForm");
+
+proposalForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from submitting normally
+
+    // Get the selected answer
+    var answer = document.getElementById("answer").value;
+
+    // Close the modal
+    modal.style.display = "none";
+
+    // Display a confirmation message on the page
+    var confirmationMessage = document.createElement("p");
+    confirmationMessage.textContent = "You answered: " + answer;
+    document.querySelector(".acknowledgment").appendChild(confirmationMessage);
+});
+
 </script>
 </body>
 </html>
