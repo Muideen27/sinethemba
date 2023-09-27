@@ -291,7 +291,7 @@ textarea#message-input::placeholder {
     background-color: #ff3399;
 }
 
-/* Styles for the modal */
+/* 11. Proposal Form */
 .modal {
     display: none;
     position: fixed;

@@ -124,14 +124,14 @@
     <a href="/proposal" class="proposal-button">Continue to Proposal</a>
 </div>
 
-<!-- Modal -->
+<!-- Proposal Form -->
 <div id="proposalModal" class="modal">
     <div class="modal-content">
         <h2>Proposal Question</h2>
-        <p>Will you be my girlfriend?</p>
-        <form id="proposalForm">
+        <p>Will you marry me?</p>
+        <form id="proposalForm" method="POST" action="{{ url_for('views.home') }}">
             <label for="answer">Answer:</label>
-            <select id="answer" name="answer">
+            <select id="answer" name="proposal_answer">
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
@@ -140,7 +140,9 @@
     </div>
 </div>
 
+
 <script>
+    
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
     const photos = document.querySelectorAll(".photo-container img");
