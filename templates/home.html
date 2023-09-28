@@ -128,7 +128,7 @@
 <div id="proposalModal" class="modal">
     <div class="modal-content">
         <h2>Proposal Question</h2>
-        <p>Will you marry me?</p>
+        <p>Will you be my girlfriend?</p>
         <form id="proposalForm" method="POST" action="{{ url_for('views.home') }}">
             <label for="answer">Answer:</label>
             <select id="answer" name="proposal_answer">
@@ -139,7 +139,6 @@
         </form>
     </div>
 </div>
-
 
 <script>
     
@@ -181,8 +180,6 @@ proposalLink.addEventListener("click", function (e) {
 var proposalForm = document.getElementById("proposalForm");
 
 proposalForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from submitting normally
-
     // Get the selected answer
     var answer = document.getElementById("answer").value;
 
