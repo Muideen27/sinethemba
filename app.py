@@ -11,7 +11,8 @@ def create_app():
     # Configure the app here
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Leye:leye@localhost/my_love'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:leye@localhost/love'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # postgres://my_love_user:xropZRjGZpU3lnsXIs25SlEHKGcJHjLn@dpg-ckamtn4g66mc738rbj70-a.oregon-postgres.render.com/my_love
 
 
     # Initialize extensions

@@ -8,6 +8,7 @@ views = Blueprint("views", __name__)
 def home():
     if request.method == "POST":
         user_message = request.form.get("user_message")
+        print(f'Received message_answer: {user_message}')
 
         if user_message:
             new_message = Message(text=user_message)
